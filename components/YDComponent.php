@@ -14,6 +14,7 @@
  *        'basePath'      => $appPath,
  *        'proxyPath'     => $appPath.'/proxies',
  *        'entityPath'    => array($appPath.'/models'),
+ *        'cachePath'     => dirname($appPath).'/cache',
  *        'db' => array(
  *            'driver' => 'pdo_sqlite',
  *            'path' => $appPath.'/data/blog.db'
@@ -34,6 +35,7 @@ class YDComponent extends CApplicationComponent
 	private $basePath;
 	private $proxyPath;
 	private $entityPath;
+	private $cachePath;
 	private $db;
 
 	public function init()
@@ -60,9 +62,7 @@ class YDComponent extends CApplicationComponent
 
 	public function initDoctrine()
 	{
-		$cache = new Doctrine\Common\Cache\FilesystemCache($this->getBasePath() . '/../public/cache');
-
-
+		$cache = new Doctrine\Common\Cache\FilesystemCache($this->getCachePath());
 		$config = Setup::createAnnotationMetadataConfiguration($this->entityPath, true);
 		$config->setMetadataCacheImpl($cache);
 		$config->setQueryCacheImpl($cache);
@@ -71,6 +71,16 @@ class YDComponent extends CApplicationComponent
 		$config->setAutoGenerateProxyClasses(true);
 
 		$this->em = EntityManager::create($this->db, $config);
+	}
+
+	public function getCachePath()
+	{
+		return $this->cachePath;
+	}
+
+	public function setCachePath($cachePath)
+	{
+		$this->cachePath = $cachePath;
 	}
 
 	public function getProxyPath()
