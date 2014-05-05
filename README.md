@@ -34,7 +34,7 @@ This is an extension for the Yii Framework that integrates Doctrine 2 ORM & ODM 
 			'entityPath'    => array(
 				dirname(__FILE__).'/models'
 			),
-			'cachePath'  => dirname(dirname(__FILE__)) . '/public/cache',
+			'cachePath'  => dirname(dirname(__FILE__)) . '/cache',
 			'db' => array(
 				'driver' => 'pdo_sqlite',
 				'path' => dirname(__FILE__).'/data/blog.db'
