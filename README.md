@@ -59,7 +59,7 @@ This is an extension for the Yii Framework that integrates Doctrine 2 ORM & ODM 
 	'aliases' => array(
 		.. .
 		//Path to your Composer vendor dir plus vendor/bluecloudy path
-		'YiiDoctrine' =>realpath(__DIR__ . '/../../../vendor/bluecloudy/yiidoctrine2/bluecloudy/yiidoctrine2'),
+		'YiiDoctrine' =>realpath(__DIR__ . '/../../vendor/bluecloudy/yiidoctrine2/bluecloudy/yiidoctrine2'),
         .. .
 	),
 ```
