@@ -18,12 +18,12 @@ This is an extension for the Yii Framework that integrates Doctrine 2 ORM & ODM 
 ```php
 	'aliases' => array(
 		.. .
-        'YiiDoctrine' => realpath(__DIR__ . '/../extensions/cloudy/yiidoctrine2'),
+        'YiiDoctrine' => realpath(__DIR__ . '/../extensions/bluecloudy/yiidoctrine2'),
         .. .
 	),
 ```
 
-0. Include ext.cloudy.YiiDoctrine.components.YDComponent.  
+0. Include ext.bluecloudy.YiiDoctrine.components.YDComponent.
 
 ```php
 	'components' => array(
@@ -59,7 +59,7 @@ This is an extension for the Yii Framework that integrates Doctrine 2 ORM & ODM 
 	'aliases' => array(
 		.. .
 		//Path to your Composer vendor dir plus vendor/bluecloudy path
-		'YiiDoctrine' =>realpath(__DIR__ . '/../../../vendor/bluecloudy/yiidoctrine2/cloudy/yiidoctrine2'),
+		'YiiDoctrine' =>realpath(__DIR__ . '/../../../vendor/bluecloudy/yiidoctrine2/bluecloudy/yiidoctrine2'),
         .. .
 	),
 ```
