@@ -24,7 +24,7 @@ class YDController extends CController
 	}
 
 	/**
-	 * @return BaseRepository
+	 * @return YDBaseRepository
 	 */
 	public function getRepository()
 	{
