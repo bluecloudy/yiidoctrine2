@@ -8,7 +8,7 @@
  * @copyright Copyright &copy; 2014, smartexts.com.
  * @license   https://github.com/bluecloudy/yiidoctrine2
  */
-class YiiDoctrine2Controller extends CController
+class YDController extends CController
 {
 	/**
 	 * @var Doctrine\ORM\EntityManager $entityManager
